@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset ="UTF-8">
-	<link rel="stylesheet" href="style.css">
-	<title>Projeto Integrador - Agilize</title>
-</head>
-<body>
-	<header>
-		<h1>Agilize</h1>
-	</header>
-
-	<section>
-		
-		<h2>Formulário de Requisição</h2>
-
-		<form name="requisicao">
-		<fieldset>
-			Nome:<br>
-			<input type="text" name="nome" maxlength="50" size="30"><br>
-			Telefone:<br>
-			<input type="text" name="tel" maxlength="30" size="30"><br>
-			E-Mail:<br>
-			<input type="text" name="email" maxlength="30" size="30"><br>
-			
-			<textarea name="mensagem" cols="60" rows="10" placeholder="Descreva sua solicitação..."/></textarea>
-			<br>
-			
-			<input type="submit" name="botao" value="Enviar" id="btnEnviar">
-		</fieldset>
-		</form>
-
-	</section>
-
-		
-
-	<footer>
-		<p>Projeto Integrador Univesp - Agilize</p>
-	</footer>
-
-</body>
+	<head>
+		<meta charset ="UTF-8">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+		<title>Projeto Integrador - Agilize</title>
+	</head>
+	<body>
+		<header>
+			<h1>Agilize</h1>
+		</header>
+		<section class="card-body">
+			<h2>Formulário de Requisição</h2>
+			<fieldset class="card animated zoomIn myForm">
+				<form class="signin-form" formname="requisicao" action="" method="POST">
+					<div class="">
+						<div class="row">
+							<div class="form-group col-sm-2">
+								<label class="label" for="nome">Nome:</label>
+								<input class="form-control form-control-sm" type="text" id="nome" name="nome" maxlength="50" size="30" onkeyup="this.value = this.value.toUpperCase();" autofocus />
+							</div>
+							<div class="form-group col-sm-2">
+								<label class="label" for="telefone">Telefone:</label>
+								<input class="form-control form-control-sm" type="number" id="telefone" name="telefone" placeholder="(99) 99999-9999" maxlength="30" size="30" />
+							</div>
+							<div class="form-group col-sm-2">
+								<label class="label" for="email">E-Mail:</label>
+								<input class="form-control form-control-sm" type="text" id="email" name="email" maxlength="30" size="30" onkeyup="this.value = this.value.toLowerCase();" />
+							</div>
+							<div class="form-group col-sm-12">
+								<label>Mensagem:</label>
+								<textarea class="form-control form-control-sm" name="mensagem" cols="60" rows="10" placeholder="Descreva sua solicitação..." onkeyup="this.value = this.value.toUpperCase();" ></textarea>
+							</div>
+							<br />
+							<div class="submit" align="center">
+								<input type="submit" class="btn btn-danger btn-sm" name="botao" id="btnEnviar" value="Enviar" />
+							</div>
+						</div>
+					</div>
+				</form>
+			</fieldset>
+		</section>
+		<footer class="navbar fixed-bottom">
+			<p>Projeto Integrador Univesp - Agilize</p>
+		</footer>
+	</body>
 </html>
