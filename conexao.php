@@ -1,9 +1,18 @@
 <?php
 	$host = "localhost";
-	$user = "root";
-	$pass = "";
-	$banco = "bd_agilize";
+	$user = "edcmnet_univesp";
+	$pass = "univesp2021";
+	$banco = "edcmnet_univesp1";
 
-	$conexao = @mysqli_connect($host,$user,$pass,$bd_agilize)
-	or die ("Problemas com a conexão do Banco de Dados");
+	$conn = mysqli_connect($host, $user, $pass, $banco);
+		mysqli_set_charset ($conn, "utf8");
+
+	if (!$conn) {
+		die ("Falha na conexao: " . mysqli_connect_error());
+	}
+		else {
+			//echo "Conexao realizada com sucesso";
+			//header("Location: index.php");
+			//exit();
+	}
 ?>
